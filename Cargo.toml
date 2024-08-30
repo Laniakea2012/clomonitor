@@ -7,7 +7,7 @@ members = [
     "clomonitor-linter",
     "clomonitor-notifier",
     "clomonitor-registrar",
-    "clomonitor-tracker",
+    "clomonitor-tracker", "svg-server",
 ]
 
 [workspace.package]

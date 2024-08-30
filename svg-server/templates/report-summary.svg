@@ -1,0 +1,532 @@
+<svg
+  class="{{ theme }}"
+  width="450"
+  height="235"
+  viewBox="0 0 450 235"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    .header {
+      fill: #2a0552;
+    }
+
+    .dark .header {
+      fill: #0f0e11;
+    }
+
+    .logo {
+      fill: #fff;
+    }
+
+    .clo {
+      font-family: "Arial", Gadget, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .monitor {
+      font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    .beta {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 9px;
+      font-weight: 400;
+      fill: #fff;
+    }
+
+    .bg {
+      fill: #f9f9f9;
+    }
+
+    .dark .bg {
+      fill: #2c2e31;
+    }
+
+    .title {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .3px;
+      fill: #6c757d;
+    }
+
+    .dark .title {
+      fill: #a0a0a0;
+    }
+
+    .barBg {
+      fill: #fff;
+      stroke: #dee2e6;
+    }
+
+    .dark .barBg {
+      fill: #131216;
+      stroke: #676869;
+    }
+
+    .valueBg {
+      fill: #dee2e6;
+      stroke: #dee2e6;
+    }
+
+    .dark .valueBg {
+      fill: #2b2a2e;
+      stroke: #676869;
+    }
+
+    .value {
+      font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      font-size: 12px;
+      font-weight: 600;
+      fill: #38383f;
+    }
+
+    .dark .value {
+      fill: #a3a3a6;
+    }
+
+    .barWrapper {
+      fill: #dee2e6;
+    }
+
+    .dark .barWrapper {
+      fill: #2b2a2e;
+    }
+
+    .bar-a {
+      fill: #90be6d;
+    }
+
+    .bar-b {
+      fill: #f9c74f;
+    }
+
+    .bar-c {
+      fill: #f8961e;
+    }
+
+    .bar-d {
+      fill: #f94144;
+    }
+
+    .empty-icon {
+      stroke: #6c757d;
+    }
+
+    .dark .empty-icon {
+      stroke: #a0a0a0;
+    }
+
+    .icon {
+      stroke: #6c757d;
+      fill: #6c757d;
+    }
+
+    .dark .icon {
+      stroke: #a0a0a0;
+      fill: #a0a0a0;
+    }
+
+    @supports(-moz-appearance: auto) {
+      /* Selector detects Firefox */
+      .value { font-size:12px; }
+    }
+
+    .circle {
+      fill: #fff;
+      stroke: #e2e2e2;
+    }
+
+    .dark .circle {
+      fill: #131216;
+      stroke: #676869;
+    }
+
+    .chart-circle {
+      fill: none;
+      stroke-dashoffset: 251.42;
+    }
+
+    .circle-a {
+      stroke: #90be6d;
+    }
+
+    .circle-b {
+      stroke: #f9c74f;
+    }
+
+    .circle-c {
+      stroke: #f8961e;
+    }
+
+    .circle-d {
+      stroke: #f94144;
+    }
+
+    .global {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 34px;
+      font-weight: 400;
+      fill: #38383f;
+    }
+
+    .dark .global {
+      fill: #a3a3a6;
+    }
+  </style>
+
+  <!-- Header start -->
+
+  <rect
+    x="0"
+    y="0"
+    class="header"
+    height="50"
+    width="450"
+  />
+
+  <!-- Logo -->
+
+  <g transform="translate(18, 32)">
+    <svg y="-19px" viewBox="0 0 580 75" height="25" width="152">
+      <g id="layer0">
+        <g transform="matrix(1 0 0 1 10 0.108586)">
+          <path d="M108.899,52.1547C114.39,52.1547 118.717,49.9914 122.211,45.6648L129.367,52.9868C123.709,59.3103 117.219,62.4721 109.564,62.4721C101.91,62.4721 95.7524,60.1423 90.7602,55.3165C85.7679,50.4906 83.4382,44.4999 83.4382,37.178C83.4382,29.856 85.9343,23.6988 90.9266,18.873C95.9189,14.0471 102.076,11.551 109.398,11.551C117.552,11.551 124.375,14.7128 129.7,20.8699L122.877,28.6911C119.382,24.3645 115.056,22.2012 109.897,22.2012C105.737,22.2012 102.242,23.5324 99.247,26.195C96.2517,28.8575 94.754,32.5185 94.754,37.178C94.754,41.8374 96.0853,45.4984 98.9142,48.3273C101.577,50.6571 104.905,52.1547 108.899,52.1547L108.899,52.1547Z" fill="#FFFFFF"/>
+          <path d="M138.02,61.8064L138.02,12.3831L149.003,12.3831L149.003,51.9883L170.137,51.9883L170.137,61.8064L138.02,61.8064L138.02,61.8064Z" fill="#FFFFFF"/>
+          <path d="M218.396,54.9837C213.403,59.8095 207.246,62.3057 199.924,62.3057C192.602,62.3057 186.445,59.8095 181.453,54.9837C176.461,50.1578 173.965,44.0007 173.965,36.8451C173.965,29.5232 176.461,23.5324 181.453,18.7066C186.445,13.8807 192.602,11.3846 199.924,11.3846C207.246,11.3846 213.403,13.8807 218.396,18.7066C223.388,23.5324 225.884,29.6896 225.884,36.8451C225.884,44.1671 223.388,50.1578 218.396,54.9837L218.396,54.9837ZM214.568,36.8451C214.568,32.5185 213.071,28.6911 210.242,25.5293C207.413,22.3676 203.918,20.8699 199.758,20.8699C195.598,20.8699 192.103,22.3676 189.274,25.5293C186.445,28.6911 184.947,32.3521 184.947,36.8451C184.947,41.1718 186.445,44.9992 189.274,48.1609C192.103,51.3227 195.598,52.8204 199.758,52.8204C203.918,52.8204 207.413,51.3227 210.242,48.1609C213.237,44.9992 214.568,41.3382 214.568,36.8451L214.568,36.8451Z" fill="#FFFFFF"/>
+        </g>
+      </g>
+      <g id="layer1">
+        <g>
+          <path d="M15.5,47.7L6.4,47.7L6.4,69.1L27.7,69.1L27.7,59.9L15.5,59.9L15.5,47.7Z" fill="#FFFFFF"/>
+          <path d="M61.3,47.8L61.3,59.9L49.1,59.9L49.1,59.8L49.1,69.1L70.4,69.1L70.4,47.7L61.2,47.7L61.3,47.8Z" fill="#FFFFFF"/>
+          <path d="M6.4,26.4L15.6,26.4L15.5,26.3L15.5,14.2L27.7,14.2L27.7,5L6.4,5L6.4,26.4Z" fill="#FFFFFF"/>
+          <path d="M49.1,5L49.1,14.2L61.3,14.2L61.3,26.4L70.4,26.4L70.4,5L49.1,5Z" fill="#FFFFFF"/>
+        </g>
+        <g>
+          <path d="M42.8587,21.3587L35.7,14.2L49.1,14.2L49.1,5L27.7,5L27.7,14.2L34.8587,21.3587L42.8587,21.3587Z" fill="#FFFFFF" fill-opacity="0.5"/>
+          <path d="M41.441,52.241L33.441,52.241L39,57.8L41,59.9L27.7,59.9L27.7,69.1L49.1,69.1L49.1,59.8L43,53.8L41.441,52.241Z" fill="#FFFFFF" fill-opacity="0.5"/>
+          <path d="M61.3,26.4L61.3,39.7L59.2,37.6L53.6543,32.0543L53.6543,40.1543L55.1,41.6L61.2,47.7L70.4,47.7L70.4,26.4L61.3,26.4Z" fill="#FFFFFF" fill-opacity="0.5"/>
+          <path d="M23.6745,34.4745L15.6,26.4L6.4,26.4L6.4,47.7L15.5,47.7L15.5,34.4L23.6745,42.5745L23.6745,34.4745Z" fill="#FFFFFF" fill-opacity="0.5"/>
+        </g>
+      </g>
+      <g id="layer2">
+        <path d="M38.4,18.8747C28.362,18.8747 20.2247,27.012 20.2247,37.05C20.2247,47.088 28.362,55.2253 38.4,55.2253C48.438,55.2253 56.5753,47.088 56.5753,37.05C56.5753,27.012 48.438,18.8747 38.4,18.8747L38.4,18.8747ZM38.4,22.3925C46.5006,22.3925 53.0575,28.9481 53.0575,37.05C53.0575,45.1506 46.5019,51.7075 38.4,51.7075C30.2994,51.7075 23.7425,45.1519 23.7425,37.05C23.7425,28.9494 30.2981,22.3925 38.4,22.3925L38.4,22.3925ZM48.6752,31.9394L47.0236,30.2745C46.6816,29.9297 46.1247,29.9274 45.7799,30.2695L35.4206,40.5456L31.0386,36.128C30.6965,35.7832 30.1397,35.781 29.7949,36.123L28.1299,37.7746C27.7851,38.1166 27.7828,38.6735 28.1249,39.0184L34.778,45.7253C35.12,46.0701 35.6769,46.0724 36.0217,45.7303L48.6703,33.1832C49.015,32.8411 49.0172,32.2843 48.6752,31.9394L48.6752,31.9394Z" fill="#FFFFFF"/>
+      </g>
+      <g id="layer3">
+        <g transform="matrix(1 0 0 1 13 0)">
+          <path d="M237.78,62.1077L237.78,12.0003L247.761,12.0003L259.621,47.4788C260.715,50.7829 261.512,53.2552 262.014,54.8958C262.583,53.0729 263.472,50.3955 264.68,46.8636L276.677,12.0003L285.597,12.0003L285.597,62.1077L279.206,62.1077L279.206,20.1693L264.645,62.1077L258.664,62.1077L244.172,19.4515L244.172,62.1077L237.78,62.1077Z" fill="#FFFFFF" fill-opacity="0.7"/>
+          <path d="M294.279,37.7034C294.279,29.3864 296.512,22.8751 300.978,18.1697C305.445,13.4643 311.209,11.1116 318.273,11.1116C322.899,11.1116 327.069,12.2168 330.783,14.4271C334.497,16.6374 337.328,19.7192 339.277,23.6727C341.225,27.6261 342.199,32.1094 342.199,37.1224C342.199,42.2038 341.174,46.7497 339.123,50.7601C337.072,54.7705 334.167,57.8068 330.407,59.869C326.647,61.9311 322.591,62.9622 318.239,62.9622C313.522,62.9622 309.307,61.8229 305.593,59.5443C301.878,57.2656 299.064,54.1553 297.15,50.2132C295.236,46.2711 294.279,42.1012 294.279,37.7034L294.279,37.7034ZM301.115,37.806C301.115,43.8444 302.739,48.6011 305.986,52.076C309.233,55.5509 313.306,57.2884 318.205,57.2884C323.195,57.2884 327.302,55.5338 330.527,52.0247C333.751,48.5156 335.363,43.5368 335.363,37.0882C335.363,33.0094 334.674,29.449 333.295,26.407C331.917,23.3651 329.9,21.0067 327.245,19.3318C324.591,17.657 321.611,16.8196 318.307,16.8196C313.613,16.8196 309.575,18.4318 306.191,21.6561C302.807,24.8804 301.115,30.2637 301.115,37.806L301.115,37.806Z" fill="#FFFFFF" fill-opacity="0.7"/>
+          <path d="M350.676,62.1077L350.676,12.0003L357.477,12.0003L383.796,51.3411L383.796,12.0003L390.153,12.0003L390.153,62.1077L383.351,62.1077L357.033,22.7327L357.033,62.1077L350.676,62.1077Z" fill="#FFFFFF" fill-opacity="0.7"/>
+          <path d="M402.424,62.1077L402.424,12.0003L409.055,12.0003L409.055,62.1077L402.424,62.1077Z" fill="#FFFFFF" fill-opacity="0.7"/>
+          <path d="M433.493,62.1077L433.493,17.9134L416.984,17.9134L416.984,12.0003L456.701,12.0003L456.701,17.9134L440.124,17.9134L440.124,62.1077L433.493,62.1077Z" fill="#FFFFFF" fill-opacity="0.7"/>
+          <path d="M460.222,37.7034C460.222,29.3864 462.455,22.8751 466.921,18.1697C471.387,13.4643 477.152,11.1116 484.216,11.1116C488.841,11.1116 493.011,12.2168 496.725,14.4271C500.44,16.6374 503.271,19.7192 505.219,23.6727C507.167,27.6261 508.141,32.1094 508.141,37.1224C508.141,42.2038 507.116,46.7497 505.065,50.7601C503.014,54.7705 500.109,57.8068 496.349,59.869C492.59,61.9311 488.534,62.9622 484.181,62.9622C479.465,62.9622 475.249,61.8229 471.535,59.5443C467.821,57.2656 465.007,54.1553 463.093,50.2132C461.179,46.2711 460.222,42.1012 460.222,37.7034L460.222,37.7034ZM467.057,37.806C467.057,43.8444 468.681,48.6011 471.928,52.076C475.175,55.5509 479.248,57.2884 484.147,57.2884C489.138,57.2884 493.245,55.5338 496.469,52.0247C499.693,48.5156 501.305,43.5368 501.305,37.0882C501.305,33.0094 500.616,29.449 499.238,26.407C497.859,23.3651 495.842,21.0067 493.188,19.3318C490.533,17.657 487.554,16.8196 484.25,16.8196C479.556,16.8196 475.517,18.4318 472.133,21.6561C468.749,24.8804 467.057,30.2637 467.057,37.806L467.057,37.806Z" fill="#FFFFFF" fill-opacity="0.7"/>
+          <path d="M516.789,62.1077L516.789,12.0003L539.006,12.0003C543.472,12.0003 546.867,12.4503 549.191,13.3504C551.515,14.2505 553.373,15.8398 554.763,18.1185C556.153,20.3971 556.847,22.915 556.847,25.6722C556.847,29.2269 555.697,32.2233 553.395,34.6614C551.094,37.0996 547.539,38.6491 542.731,39.3099C544.486,40.153 545.819,40.9847 546.73,41.805C548.667,43.5823 550.501,45.804 552.233,48.47L560.949,62.1077L552.609,62.1077L545.978,51.6829C544.042,48.6751 542.446,46.3737 541.193,44.7786C539.94,43.1836 538.818,42.067 537.826,41.429C536.835,40.791 535.827,40.3467 534.802,40.096C534.05,39.9365 532.819,39.8568 531.11,39.8568L523.42,39.8568L523.42,62.1077L516.789,62.1077ZM523.42,34.1146L537.673,34.1146C540.703,34.1146 543.073,33.8013 544.782,33.1746C546.491,32.548 547.79,31.5454 548.679,30.1668C549.567,28.7882 550.012,27.29 550.012,25.6722C550.012,23.3024 549.151,21.3541 547.431,19.8275C545.711,18.3008 542.993,17.5374 539.279,17.5374L523.42,17.5374L523.42,34.1146Z" fill="#FFFFFF" fill-opacity="0.7"/>
+        </g>
+      </g>
+    </svg>
+  </g>
+
+  <!-- Header end -->
+
+  <!-- Body start -->
+
+  <rect
+    x="0"
+    y="50"
+    class="bg"
+    height="185"
+    width="450"
+  />
+
+  <!-- Global -->
+  <g transform="translate(23, 96)">
+    <g>
+      <circle class="circle" cx="45" cy="45" r="40" stroke-width="5" />
+      <circle class="chart-circle circle-{{ score.global|rating }}" cx="45" cy="45" r="40" stroke-width="5" stroke-dasharray="{{ score.global|stroke }}" transform="rotate(-90 45 45)" />
+    </g>
+
+    <g class="global">
+      <text x="45" y="57" text-anchor="middle" color="#38383f">{{ score.global|round }}</text>
+    </g>
+  </g>
+
+  <!-- Documentation -->
+
+  <g transform="translate(135, 80)">
+    <g>
+      <rect
+        x="0"
+        y="0"
+        class="barBg"
+        height="18"
+        width="290"
+        stroke-opacity="1"
+      />
+
+      <g class="title" transform="translate(5, 0)">
+        <svg y="3" class="empty-icon" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+        </svg>
+
+        <text x="16" y="13">Documentation</text>
+      </g>
+
+      <rect
+        x="135"
+        y="0"
+        class="valueBg"
+        height="18"
+        width="30"
+        stroke-opacity="1"
+      />
+
+      <g class="value">
+        <text x="150" y="13" text-anchor="middle">{{ score.documentation|to_string }}</text>
+      </g>
+
+      <g transform="translate(175, 7)">
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="106"
+          class="barWrapper"
+        />
+
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="{{ score.documentation|rs_section_score_width }}"
+          class="bar-{{ score.documentation|rating_opt }}"
+        />
+      </g>
+    </g>
+  </g>
+
+  <!-- License -->
+
+  <g transform="translate(135, 106)">
+    <g>
+      <rect
+        x="0"
+        y="0"
+        class="barBg"
+        height="18"
+        width="290"
+        stroke-opacity="1"
+      />
+
+      <g class="title" transform="translate(5, 0)">
+        <svg y="3" class="icon" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path d="M256 32c-70.7 0-128 57.3-128 128s57.3 128 128 128 128-57.3 128-128S326.7 32 256 32zm0 208c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80zM193.7 307.4c-19.1-8.1-36.2-19.6-50.8-34.3-1.4-1.4-2.8-2.8-4.1-4.3L64 400h96l48 80 48-105.8 25.5-56.2c-8.4 1.3-16.9 2-25.5 2-21.6 0-42.5-4.2-62.3-12.6zM373.3 268.9c-1.3 1.4-2.7 2.9-4.1 4.3-14.6 14.6-31.7 26.2-50.7 34.2L294 361.2l-21.9 48.4L304 480l48-80h96l-74.7-131.1z" />
+        </svg>
+
+        <text x="16" y="13">License</text>
+      </g>
+
+      <rect
+        x="135"
+        y="0"
+        class="valueBg"
+        height="18"
+        width="30"
+        stroke-opacity="1"
+      />
+
+      <g class="value">
+        <text x="150" y="13" text-anchor="middle">{{ score.license|to_string }}</text>
+      </g>
+
+      <g transform="translate(175, 7)">
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="106"
+          class="barWrapper"
+        />
+
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="{{ score.license|rs_section_score_width }}"
+          class="bar-{{ score.license|rating_opt }}"
+        />
+      </g>
+    </g>
+  </g>
+
+  <!-- Best practices -->
+
+  <g transform="translate(135, 132)">
+    <g>
+      <rect
+        x="0"
+        y="0"
+        class="barBg"
+        height="18"
+        width="290"
+        stroke-opacity="1"
+      />
+
+      <g class="title" transform="translate(5, 0)">
+        <svg y="3" class="icon" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path d="M5 4.604v9.185a4 4 0 0 0 1.781 3.328L12 20.597l5.219-3.48A4 4 0 0 0 19 13.79V4.604L12 3.05 5 4.604zM3.783 2.826L12 1l8.217 1.826a1 1 0 0 1 .783.976v9.987a6 6 0 0 1-2.672 4.992L12 23l-6.328-4.219A6 6 0 0 1 3 13.79V3.802a1 1 0 0 1 .783-.976zM12 13.5l-2.939 1.545.561-3.272-2.377-2.318 3.286-.478L12 6l1.47 2.977 3.285.478-2.377 2.318.56 3.272L12 13.5z"></path>
+          </g>
+        </svg>
+
+        <text x="16" y="13">Best Practices</text>
+      </g>
+
+      <rect
+        x="135"
+        y="0"
+        class="valueBg"
+        height="18"
+        width="30"
+        stroke-opacity="1"
+      />
+
+      <g class="value">
+        <text x="150" y="13" text-anchor="middle">{{ score.best_practices|to_string }}</text>
+      </g>
+
+      <g transform="translate(175, 7)">
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="106"
+          class="barWrapper"
+        />
+
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="{{ score.best_practices|rs_section_score_width }}"
+          class="bar-{{ score.best_practices|rating_opt }}"
+        />
+      </g>
+    </g>
+  </g>
+
+  <!-- Security -->
+
+  <g transform="translate(135, 158)">
+    <g>
+      <rect
+        x="0"
+        y="0"
+        class="barBg"
+        height="18"
+        width="290"
+        stroke-opacity="1"
+      />
+
+      <g class="title" transform="translate(5, 0)">
+        <svg y="3" class="icon" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722 0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z" />
+        </svg>
+
+        <text x="16" y="13">Security</text>
+      </g>
+
+      <rect
+        x="135"
+        y="0"
+        class="valueBg"
+        height="18"
+        width="30"
+        stroke-opacity="1"
+      />
+
+      <g class="value">
+        <text x="150" y="13" text-anchor="middle">{{ score.security|to_string }}</text>
+      </g>
+
+     <g transform="translate(175, 7)">
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="106"
+          class="barWrapper"
+        />
+
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="{{ score.security|rs_section_score_width }}"
+          class="bar-{{ score.security|rating_opt }}"
+        />
+      </g>
+    </g>
+  </g>
+
+  <!-- Legal -->
+
+  <g transform="translate(135, 184)">
+    <g>
+      <rect
+        x="0"
+        y="0"
+        class="barBg"
+        height="18"
+        width="290"
+        stroke-opacity="1"
+      />
+
+      <g class="title" transform="translate(5, 0)">
+        <svg y="3" class="icon" stroke-width="0" viewBox="0 0 14 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7 4c-.83 0-1.5-.67-1.5-1.5S6.17 1 7 1s1.5.67 1.5 1.5S7.83 4 7 4zm7 6c0 1.11-.89 2-2 2h-1c-1.11 0-2-.89-2-2l2-4h-1c-.55 0-1-.45-1-1H8v8c.42 0 1 .45 1 1h1c.42 0 1 .45 1 1H3c0-.55.58-1 1-1h1c0-.55.58-1 1-1h.03L6 5H5c0 .55-.45 1-1 1H3l2 4c0 1.11-.89 2-2 2H2c-1.11 0-2-.89-2-2l2-4H1V5h3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1h3v1h-1l2 4zM2.5 7L1 10h3L2.5 7zM13 10l-1.5-3-1.5 3h3z" />
+        </svg>
+
+        <text x="16" y="13">Legal</text>
+      </g>
+
+      <rect
+        x="135"
+        y="0"
+        class="valueBg"
+        height="18"
+        width="30"
+        stroke-opacity="1"
+      />
+
+      <g class="value">
+        <text x="150" y="13" text-anchor="middle">{{ score.legal|to_string }}</text>
+      </g>
+
+      <g transform="translate(175, 7)">
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="106"
+          class="barWrapper"
+        />
+
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="{{ score.legal|rs_section_score_width }}"
+          class="bar-{{ score.legal|rating_opt }}"
+        />
+      </g>
+    </g>
+  </g>
+
+  <!-- Body end -->
+</svg>

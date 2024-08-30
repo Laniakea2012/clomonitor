@@ -1,14 +1,14 @@
 /// Template filter that returns the rating letter corresponding to the score
 /// value provided.
 #[allow(clippy::unnecessary_wraps, clippy::trivially_copy_pass_by_ref)]
-pub(crate) fn rating(score: &f64) -> askama::Result<char> {
+pub fn rating(score: &f64) -> askama::Result<char> {
     Ok(clomonitor_core::score::rating(*score))
 }
 
 /// Template filter that returns the rating letter corresponding to the score
 /// value provided.
 #[allow(clippy::unnecessary_wraps)]
-pub(crate) fn rating_opt(score: &Option<f64>) -> askama::Result<String> {
+pub fn rating_opt(score: &Option<f64>) -> askama::Result<String> {
     Ok(match score {
         Some(v) => clomonitor_core::score::rating(*v).to_string(),
         None => "na".to_string(),
@@ -23,13 +23,13 @@ pub(crate) fn rating_opt(score: &Option<f64>) -> askama::Result<String> {
     clippy::cast_possible_truncation,
     clippy::cast_sign_loss
 )]
-pub(crate) fn round(v: &f64) -> askama::Result<usize> {
+pub fn round(v: &f64) -> askama::Result<usize> {
     Ok(v.round() as usize)
 }
 
 /// Template filter that returns the width of the section score bar.
 #[allow(clippy::unnecessary_wraps)]
-pub(crate) fn rs_section_score_width(score: &Option<f64>) -> askama::Result<f64> {
+pub fn rs_section_score_width(score: &Option<f64>) -> askama::Result<f64> {
     Ok(match score {
         Some(v) => {
             let width = (v * 1.06).round();
@@ -45,7 +45,7 @@ pub(crate) fn rs_section_score_width(score: &Option<f64>) -> askama::Result<f64>
 
 /// Template filter that return the stroke-dasharray for the global score.
 #[allow(clippy::unnecessary_wraps, clippy::trivially_copy_pass_by_ref)]
-pub(crate) fn stroke(v: &f64) -> askama::Result<f64> {
+pub fn stroke(v: &f64) -> askama::Result<f64> {
     Ok(251.42 + (251.42 * v / 100.0))
 }
 
@@ -56,7 +56,7 @@ pub(crate) fn stroke(v: &f64) -> askama::Result<f64> {
     clippy::cast_sign_loss,
     clippy::cast_possible_truncation
 )]
-pub(crate) fn to_string(score: &Option<f64>) -> askama::Result<String> {
+pub fn to_string(score: &Option<f64>) -> askama::Result<String> {
     Ok(match score {
         Some(v) => (v.round() as usize).to_string(),
         None => "n/a".to_string(),
