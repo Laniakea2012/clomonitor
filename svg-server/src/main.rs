@@ -49,18 +49,13 @@ async fn main() -> Result<()> {
 pub(crate) async fn report_summary_svg() -> impl IntoResponse {
     // Get project score from database
     let score = Some(Score {
-        global: 10.0,
-        global_weight: 10,
+        global: 80.0,
         documentation: Some(80.0),
-        documentation_weight: Some(10),
         license: Some(90.0),
-        license_weight: Some(10),
         best_practices: Some(70.0),
-        best_practices_weight: Some(10),
         security: Some(60.0),
-        security_weight: Some(10),
         legal: Some(100.0),
-        legal_weight: Some(10),
+        ..Score::default()
     });
 
     // Render report summary SVG and return it if the score was found
