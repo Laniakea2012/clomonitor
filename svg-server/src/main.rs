@@ -7,6 +7,7 @@ use clomonitor_core::{
 
 use axum::{
     extract::FromRef,
+    extract::Json,
     http::{
         header::{CACHE_CONTROL, CONTENT_TYPE},
         Response, StatusCode,HeaderMap,
@@ -33,7 +34,7 @@ async fn main() -> Result<()> {
     let api_routes = Router::new()
         .route(
             "/report-summary",
-            get(report_summary_svg),
+            post(report_summary_svg),
         );
     let addr: SocketAddr = "0.0.0.0:8000".parse().expect("REASON");
     let listener = TcpListener::bind(addr).await?;
@@ -46,14 +47,20 @@ async fn main() -> Result<()> {
     Ok(())
 }
 
-pub(crate) async fn report_summary_svg() -> impl IntoResponse {
-    // Get project score from database
+pub(crate) async fn report_summary_svg(Json(body): Json<serde_json::Value>) -> impl IntoResponse {
+    // Get project score from request
+    let global = body.get("global").and_then(|v| v.as_f64()).unwrap_or_default();
+    let legal = body.get("legal").and_then(|v| v.as_f64());
+    let technology_ecosystem = body.get("technology_ecosystem").and_then(|v| v.as_f64());
+    let lifecycle = body.get("lifecycle").and_then(|v| v.as_f64());
+    let security = body.get("security").and_then(|v| v.as_f64());
+
     let score = Some(Score {
-        global: 80.0,
-        legal: Some(100.0),
-        technology_ecosystem: Some(60.0),
-        lifecycle: Some(100.0),
-        security: Some(60.0),
+        global: global,
+        legal: legal,
+        technology_ecosystem: technology_ecosystem,
+        lifecycle: lifecycle,
+        security: security,
         ..Score::default()
     });
 
