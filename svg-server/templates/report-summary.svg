@@ -214,12 +214,12 @@
     x="0"
     y="50"
     class="bg"
-    height="185"
+    height="160"
     width="450"
   />
 
   <!-- Global -->
-  <g transform="translate(23, 96)">
+  <g transform="translate(23, 80)">
     <g>
       <circle class="circle" cx="45" cy="45" r="40" stroke-width="5" />
       <circle class="chart-circle circle-{{ score.global|rating }}" cx="45" cy="45" r="40" stroke-width="5" stroke-dasharray="{{ score.global|stroke }}" transform="rotate(-90 45 45)" />
@@ -230,9 +230,63 @@
     </g>
   </g>
 
-  <!-- Documentation -->
+  <!-- 合法合规 -->
 
   <g transform="translate(135, 80)">
+    <g>
+      <rect
+        x="0"
+        y="0"
+        class="barBg"
+        height="18"
+        width="290"
+        stroke-opacity="1"
+      />
+
+      <g class="title" transform="translate(5, 0)">
+        <svg y="3" class="icon" stroke-width="0" viewBox="0 0 14 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7 4c-.83 0-1.5-.67-1.5-1.5S6.17 1 7 1s1.5.67 1.5 1.5S7.83 4 7 4zm7 6c0 1.11-.89 2-2 2h-1c-1.11 0-2-.89-2-2l2-4h-1c-.55 0-1-.45-1-1H8v8c.42 0 1 .45 1 1h1c.42 0 1 .45 1 1H3c0-.55.58-1 1-1h1c0-.55.58-1 1-1h.03L6 5H5c0 .55-.45 1-1 1H3l2 4c0 1.11-.89 2-2 2H2c-1.11 0-2-.89-2-2l2-4H1V5h3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1h3v1h-1l2 4zM2.5 7L1 10h3L2.5 7zM13 10l-1.5-3-1.5 3h3z" />
+        </svg>
+
+        <text x="16" y="13">合法合规</text>
+      </g>
+
+      <rect
+        x="90"
+        y="0"
+        class="valueBg"
+        height="18"
+        width="30"
+        stroke-opacity="1"
+      />
+
+      <g class="value">
+        <text x="105" y="13" text-anchor="middle">{{ score.legal|to_string }}</text>
+      </g>
+
+      <g transform="translate(130, 7)">
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="151"
+          class="barWrapper"
+        />
+
+        <rect
+          x="0"
+          y="0"
+          height="4"
+          width="{{ score.legal|rs_section_score_width_special }}"
+          class="bar-{{ score.legal|rating_opt }}"
+        />
+      </g>
+    </g>
+  </g>
+
+  <!-- technology_ecosystem -->
+
+  <g transform="translate(135, 106)">
     <g>
       <rect
         x="0"
@@ -248,11 +302,11 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
         </svg>
 
-        <text x="16" y="13">Documentation</text>
+        <text x="16" y="13">技术生态</text>
       </g>
 
       <rect
-        x="135"
+        x="90"
         y="0"
         class="valueBg"
         height="18"
@@ -261,15 +315,15 @@
       />
 
       <g class="value">
-        <text x="150" y="13" text-anchor="middle">{{ score.documentation|to_string }}</text>
+        <text x="105" y="13" text-anchor="middle">{{ score.technology_ecosystem|to_string }}</text>
       </g>
 
-      <g transform="translate(175, 7)">
+      <g transform="translate(130, 7)">
         <rect
           x="0"
           y="0"
           height="4"
-          width="106"
+          width="151"
           class="barWrapper"
         />
 
@@ -277,68 +331,14 @@
           x="0"
           y="0"
           height="4"
-          width="{{ score.documentation|rs_section_score_width }}"
-          class="bar-{{ score.documentation|rating_opt }}"
+          width="{{ score.technology_ecosystem|rs_section_score_width_special }}"
+          class="bar-{{ score.technology_ecosystem|rating_opt }}"
         />
       </g>
     </g>
   </g>
 
-  <!-- License -->
-
-  <g transform="translate(135, 106)">
-    <g>
-      <rect
-        x="0"
-        y="0"
-        class="barBg"
-        height="18"
-        width="290"
-        stroke-opacity="1"
-      />
-
-      <g class="title" transform="translate(5, 0)">
-        <svg y="3" class="icon" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-          <path d="M256 32c-70.7 0-128 57.3-128 128s57.3 128 128 128 128-57.3 128-128S326.7 32 256 32zm0 208c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80zM193.7 307.4c-19.1-8.1-36.2-19.6-50.8-34.3-1.4-1.4-2.8-2.8-4.1-4.3L64 400h96l48 80 48-105.8 25.5-56.2c-8.4 1.3-16.9 2-25.5 2-21.6 0-42.5-4.2-62.3-12.6zM373.3 268.9c-1.3 1.4-2.7 2.9-4.1 4.3-14.6 14.6-31.7 26.2-50.7 34.2L294 361.2l-21.9 48.4L304 480l48-80h96l-74.7-131.1z" />
-        </svg>
-
-        <text x="16" y="13">License</text>
-      </g>
-
-      <rect
-        x="135"
-        y="0"
-        class="valueBg"
-        height="18"
-        width="30"
-        stroke-opacity="1"
-      />
-
-      <g class="value">
-        <text x="150" y="13" text-anchor="middle">{{ score.license|to_string }}</text>
-      </g>
-
-      <g transform="translate(175, 7)">
-        <rect
-          x="0"
-          y="0"
-          height="4"
-          width="106"
-          class="barWrapper"
-        />
-
-        <rect
-          x="0"
-          y="0"
-          height="4"
-          width="{{ score.license|rs_section_score_width }}"
-          class="bar-{{ score.license|rating_opt }}"
-        />
-      </g>
-    </g>
-  </g>
-
-  <!-- Best practices -->
+  <!-- lifecycle -->
 
   <g transform="translate(135, 132)">
     <g>
@@ -359,11 +359,11 @@
           </g>
         </svg>
 
-        <text x="16" y="13">Best Practices</text>
+        <text x="16" y="13">生命周期</text>
       </g>
 
       <rect
-        x="135"
+        x="90"
         y="0"
         class="valueBg"
         height="18"
@@ -372,15 +372,15 @@
       />
 
       <g class="value">
-        <text x="150" y="13" text-anchor="middle">{{ score.best_practices|to_string }}</text>
+        <text x="105" y="13" text-anchor="middle">{{ score.lifecycle|to_string }}</text>
       </g>
 
-      <g transform="translate(175, 7)">
+      <g transform="translate(130, 7)">
         <rect
           x="0"
           y="0"
           height="4"
-          width="106"
+          width="151"
           class="barWrapper"
         />
 
@@ -388,14 +388,14 @@
           x="0"
           y="0"
           height="4"
-          width="{{ score.best_practices|rs_section_score_width }}"
-          class="bar-{{ score.best_practices|rating_opt }}"
+          width="{{ score.lifecycle|rs_section_score_width_special }}"
+          class="bar-{{ score.lifecycle|rating_opt }}"
         />
       </g>
     </g>
   </g>
 
-  <!-- Security -->
+  <!-- 网络安全 -->
 
   <g transform="translate(135, 158)">
     <g>
@@ -413,11 +413,11 @@
           <path d="M12 2C9.243 2 7 4.243 7 7v2H6c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-9c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H9V7zm9.002 13H13v-2.278c.595-.347 1-.985 1-1.722 0-1.103-.897-2-2-2s-2 .897-2 2c0 .736.405 1.375 1 1.722V20H6v-9h12l.002 9z" />
         </svg>
 
-        <text x="16" y="13">Security</text>
+        <text x="16" y="13">网络安全</text>
       </g>
 
       <rect
-        x="135"
+        x="90"
         y="0"
         class="valueBg"
         height="18"
@@ -426,15 +426,15 @@
       />
 
       <g class="value">
-        <text x="150" y="13" text-anchor="middle">{{ score.security|to_string }}</text>
+        <text x="105" y="13" text-anchor="middle">{{ score.security|to_string }}</text>
       </g>
 
-     <g transform="translate(175, 7)">
+     <g transform="translate(130, 7)">
         <rect
           x="0"
           y="0"
           height="4"
-          width="106"
+          width="151"
           class="barWrapper"
         />
 
@@ -442,62 +442,8 @@
           x="0"
           y="0"
           height="4"
-          width="{{ score.security|rs_section_score_width }}"
+          width="{{ score.security|rs_section_score_width_special }}"
           class="bar-{{ score.security|rating_opt }}"
-        />
-      </g>
-    </g>
-  </g>
-
-  <!-- Legal -->
-
-  <g transform="translate(135, 184)">
-    <g>
-      <rect
-        x="0"
-        y="0"
-        class="barBg"
-        height="18"
-        width="290"
-        stroke-opacity="1"
-      />
-
-      <g class="title" transform="translate(5, 0)">
-        <svg y="3" class="icon" stroke-width="0" viewBox="0 0 14 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M7 4c-.83 0-1.5-.67-1.5-1.5S6.17 1 7 1s1.5.67 1.5 1.5S7.83 4 7 4zm7 6c0 1.11-.89 2-2 2h-1c-1.11 0-2-.89-2-2l2-4h-1c-.55 0-1-.45-1-1H8v8c.42 0 1 .45 1 1h1c.42 0 1 .45 1 1H3c0-.55.58-1 1-1h1c0-.55.58-1 1-1h.03L6 5H5c0 .55-.45 1-1 1H3l2 4c0 1.11-.89 2-2 2H2c-1.11 0-2-.89-2-2l2-4H1V5h3c0-.55.45-1 1-1h4c.55 0 1 .45 1 1h3v1h-1l2 4zM2.5 7L1 10h3L2.5 7zM13 10l-1.5-3-1.5 3h3z" />
-        </svg>
-
-        <text x="16" y="13">Legal</text>
-      </g>
-
-      <rect
-        x="135"
-        y="0"
-        class="valueBg"
-        height="18"
-        width="30"
-        stroke-opacity="1"
-      />
-
-      <g class="value">
-        <text x="150" y="13" text-anchor="middle">{{ score.legal|to_string }}</text>
-      </g>
-
-      <g transform="translate(175, 7)">
-        <rect
-          x="0"
-          y="0"
-          height="4"
-          width="106"
-          class="barWrapper"
-        />
-
-        <rect
-          x="0"
-          y="0"
-          height="4"
-          width="{{ score.legal|rs_section_score_width }}"
-          class="bar-{{ score.legal|rating_opt }}"
         />
       </g>
     </g>

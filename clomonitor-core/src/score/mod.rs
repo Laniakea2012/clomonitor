@@ -8,6 +8,11 @@ pub struct Score {
     pub global_weight: usize,
 
     #[serde(skip_serializing_if = "Option::is_none")]
+    pub lifecycle: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub technology_ecosystem: Option<f64>,
+
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub documentation: Option<f64>,
 
     #[serde(skip_serializing_if = "Option::is_none")]

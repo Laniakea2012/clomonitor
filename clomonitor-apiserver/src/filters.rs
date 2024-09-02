@@ -43,6 +43,23 @@ pub fn rs_section_score_width(score: &Option<f64>) -> askama::Result<f64> {
     })
 }
 
+/// Template filter that returns the width of the section score bar.
+/// Special for svg-server module.
+#[allow(clippy::unnecessary_wraps)]
+pub fn rs_section_score_width_special(score: &Option<f64>) -> askama::Result<f64> {
+    Ok(match score {
+        Some(v) => {
+            let width = (v * 1.51).round();
+            if width < 2.0 {
+                2.0
+            } else {
+                width
+            }
+        }
+        None => 0.0,
+    })
+}
+
 /// Template filter that return the stroke-dasharray for the global score.
 #[allow(clippy::unnecessary_wraps, clippy::trivially_copy_pass_by_ref)]
 pub fn stroke(v: &f64) -> askama::Result<f64> {

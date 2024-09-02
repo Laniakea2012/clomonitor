@@ -50,11 +50,10 @@ pub(crate) async fn report_summary_svg() -> impl IntoResponse {
     // Get project score from database
     let score = Some(Score {
         global: 80.0,
-        documentation: Some(80.0),
-        license: Some(90.0),
-        best_practices: Some(70.0),
-        security: Some(60.0),
         legal: Some(100.0),
+        technology_ecosystem: Some(60.0),
+        lifecycle: Some(100.0),
+        security: Some(60.0),
         ..Score::default()
     });
 
