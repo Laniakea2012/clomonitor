@@ -1,37 +1,36 @@
 use clomonitor_apiserver::filters;
 
-use clomonitor_core::{
-    score::Score,
-};
+use clomonitor_core::score::Score;
 
 use axum::{
     extract::Json,
     http::{
-        header::{CACHE_CONTROL}, StatusCode,
+        header::CACHE_CONTROL, StatusCode,
     },
-    routing::{post},
+    routing::{get, post},
     Router,
-    response::{IntoResponse},
+    response::IntoResponse,
     
 };
 
 use std::net::SocketAddr;
-use tokio::{net::TcpListener};
-use tracing::{info};
-use anyhow::{Result};
+use tokio::net::TcpListener;
+use tracing::info;
+use anyhow::Result;
 use askama_axum::Template;
 
-use serde_json;
+use auth::{protected, authorize};
 
+mod auth;
 
 #[tokio::main]
 async fn main() -> Result<()> {
 
     let api_routes = Router::new()
-        .route(
-            "/report-summary",
-            post(report_summary_svg),
-        );
+        .route("/report-summary", post(report_summary_svg))
+        .route("/protected", get(protected))
+        .route("/login", post(authorize));
+
     let addr: SocketAddr = "0.0.0.0:8000".parse().expect("Invalid address");
     let listener = TcpListener::bind(addr).await?;
 
