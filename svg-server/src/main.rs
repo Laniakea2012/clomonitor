@@ -1,32 +1,28 @@
 use clomonitor_apiserver::filters;
 
 use clomonitor_core::{
-    linter::{CheckSet, Report},
     score::Score,
 };
 
 use axum::{
-    extract::FromRef,
     extract::Json,
     http::{
-        header::{CACHE_CONTROL, CONTENT_TYPE},
-        Response, StatusCode,HeaderMap,
+        header::{CACHE_CONTROL}, StatusCode,
     },
-    middleware,
-    routing::{get, get_service, post},
+    routing::{post},
     Router,
-    response::{self, IntoResponse},
+    response::{IntoResponse},
     
 };
 
 use std::net::SocketAddr;
-use tokio::{net::TcpListener, signal, sync::RwLock};
-use tracing::{debug, info};
-use anyhow::{Context, Result};
+use tokio::{net::TcpListener};
+use tracing::{info};
+use anyhow::{Result};
 use askama_axum::Template;
-use serde::{Deserialize, Serialize};
+
 use serde_json;
-use tide::http::headers::HeaderName;
+
 
 #[tokio::main]
 async fn main() -> Result<()> {
