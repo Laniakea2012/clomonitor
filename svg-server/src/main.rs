@@ -36,7 +36,7 @@ async fn main() -> Result<()> {
             "/report-summary",
             post(report_summary_svg),
         );
-    let addr: SocketAddr = "0.0.0.0:8000".parse().expect("REASON");
+    let addr: SocketAddr = "0.0.0.0:8000".parse().expect("Invalid address");
     let listener = TcpListener::bind(addr).await?;
 
     info!("apiserver started");
