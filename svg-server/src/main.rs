@@ -19,7 +19,7 @@ use tracing::info;
 use anyhow::Result;
 use askama_axum::Template;
 
-use auth::{protected, authorize};
+use auth::{protected, authorize, Claims};
 
 mod auth;
 
@@ -42,7 +42,7 @@ async fn main() -> Result<()> {
     Ok(())
 }
 
-pub(crate) async fn report_summary_svg(Json(body): Json<serde_json::Value>) -> impl IntoResponse {
+pub(crate) async fn report_summary_svg(claims: Claims, Json(body): Json<serde_json::Value>) -> impl IntoResponse {
     // Get project score from request
     let global = body.get("global").and_then(|v| v.as_f64()).unwrap_or_default();
     let legal = body.get("legal").and_then(|v| v.as_f64());
