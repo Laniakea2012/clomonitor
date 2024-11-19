@@ -1,8 +1,8 @@
 <svg
   class="{{ theme }}"
   width="450"
-  height="235"
-  viewBox="0 0 450 235"
+  height="160"
+  viewBox="0 0 450 160"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
 >
@@ -181,17 +181,17 @@
 
   <!-- Header start -->
 
-  <rect
+  <!-- <rect
     x="0"
     y="0"
     class="header"
     height="50"
     width="450"
-  />
+  /> -->
 
   <!-- Logo -->
 
-  <g transform="translate(18, 32)">
+  <!-- <g transform="translate(18, 32)">
     <svg y="-19px" viewBox="0 0 231 42" height="25" width="152">
       <g fill="#FFF" fill-rule="evenodd">
               <path
@@ -204,7 +204,7 @@
               </g>
             </g>
     </svg>
-  </g>
+  </g> -->
 
   <!-- Header end -->
 
@@ -212,14 +212,14 @@
 
   <rect
     x="0"
-    y="50"
+    y="0"
     class="bg"
     height="160"
     width="450"
   />
 
   <!-- Global -->
-  <g transform="translate(23, 80)">
+  <g transform="translate(23, 30)">
     <g>
       <circle class="circle" cx="45" cy="45" r="40" stroke-width="5" />
       <circle class="chart-circle circle-{{ score.global|rating }}" cx="45" cy="45" r="40" stroke-width="5" stroke-dasharray="{{ score.global|stroke }}" transform="rotate(-90 45 45)" />
@@ -232,7 +232,7 @@
 
   <!-- 合法合规 -->
 
-  <g transform="translate(135, 80)">
+  <g transform="translate(135, 30)">
     <g>
       <rect
         x="0"
@@ -286,7 +286,7 @@
 
   <!-- technology_ecosystem -->
 
-  <g transform="translate(135, 106)">
+  <g transform="translate(135, 56)">
     <g>
       <rect
         x="0"
@@ -340,7 +340,7 @@
 
   <!-- lifecycle -->
 
-  <g transform="translate(135, 132)">
+  <g transform="translate(135, 82)">
     <g>
       <rect
         x="0"
@@ -397,7 +397,7 @@
 
   <!-- 网络安全 -->
 
-  <g transform="translate(135, 158)">
+  <g transform="translate(135, 108)">
     <g>
       <rect
         x="0"
